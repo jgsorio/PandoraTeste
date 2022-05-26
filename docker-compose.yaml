@@ -1,0 +1,32 @@
+version: '3'
+
+services:
+  database:
+    image: mongo:3.6
+    ports:
+      - 27017:27017
+    container_name: pandoratest-database
+
+  api:
+    build:
+      context: ./api
+    volumes:
+      - ./api:/usr/src/api
+    command: npm run dev
+    container_name: pandoratest-api
+    ports:
+      - 3333:3333
+    depends_on:
+      - database
+
+  web:
+    build:
+      context: ./frontend
+    volumes:
+      - ./frontend:/app
+    container_name: pandoratest-frontend
+    ports:
+      - 3000:3000
+    depends_on:
+      - database
+    
