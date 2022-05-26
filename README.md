@@ -7,7 +7,7 @@ Crie um serviço (API) que permita gerar documentos a partir de um template cons
 Baixe os arquivos em um diretório da sua preferẽncia
 
 Rode o comando do docker compose para realizar a instalação dos sistemas
-Obs:Cao não tenha o docker instalado, realize a instalação seguindo a [documentação](https://docs.docker.com/engine/install/)
+Obs:Caso não tenha o docker instalado, realize a instalação seguindo a [documentação](https://docs.docker.com/engine/install/)
 
 ```docker compose up -d ```
 
